@@ -4,6 +4,15 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+diffusers = "*"
+transformers = "*"
+accelerate = "*"
+torch = "*"
+Pillow = "*"
+Jinja2 = "*"
+python-dotenv = "*"
+torchvision = "*"
+torchaudio = "*"
 
 [dev-packages]
 pytest = "*"

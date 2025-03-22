@@ -1,11 +1,11 @@
 {
   "python.analysis.typeCheckingMode": "basic",
-  "python.pipenvPath": "C:\\Users\\chris\\.virtualenvs\\LeetCode-gyt9os_N",
+  "python.pipenvPath": "C:\\Users\\chris\\.virtualenvs\\amipixel-helpers-B14n_i54",
   "python.analysis.logLevel": "Trace",
   "python.analysis.diagnosticSeverityOverrides": {
       "reportMissingImports": "error"
   },
-  "python.terminal.activateEnvironment": false,
+  "python.terminal.activateEnvironment": true,
   "code-runner.customCommand": "pipenv run python ${relativeFile}",
   "[python]": {
       "editor.defaultFormatter": "ms-python.black-formatter"
@@ -22,6 +22,8 @@
   "cSpell.words": [
     "addopts",
     "autopep",
+    "CUDA",
+    "dotenv",
     "isort",
     "leetcode",
     "ONEDNN",
@@ -33,8 +35,11 @@
     "pyproject",
     "pytest",
     "pyupgrade",
+    "runwayml",
     "starcoder",
-    "Subarray"
+    "Subarray",
+    "torchaudio",
+    "torchvision"
   ],
   "python.linting.linter": "flake8",
   "python.linting.flake8Enabled": true
