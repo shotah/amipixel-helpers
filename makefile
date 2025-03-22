@@ -68,7 +68,38 @@ build:
 
 # --- Running Frame Generator ---
 FRAME_GENERATOR_SCRIPT := frame_generation/generate_frames.py # Assuming your script is in this folder
+# pipenv run python $(FRAME_GENERATOR_SCRIPT)
 
 PHONY: run-frame-generator
-run-frame-generator:
-	pipenv run python $(FRAME_GENERATOR_SCRIPT)
+run-frame-generator:	
+	pipenv run python frame_generation/found_script.py
+
+# --- Help ---
+PHONY: help
+help:
+    @echo "Makefile for AmiPixel Helpers Project"
+    @echo ""
+    @echo "Targets:"
+    @echo "  all                 - Runs hooks, installs dev dependencies, lints, and tests."
+    @echo "  model-install       - Installs PyTorch and downloads the Stable Diffusion model."
+    @echo "  install-pytorch     - Installs PyTorch with the specified CUDA version."
+    @echo "  download-diffusion-model - Downloads the Stable Diffusion model from Hugging Face."
+    @echo "  hooks               - Installs pre-commit and pipenv, then installs pre-commit hooks."
+    @echo "  clean               - Removes virtual environment, lock files, and requirements.txt."
+    @echo "  lint                - Runs the pre-commit hooks for linting."
+    @echo "  install             - Installs the project dependencies from Pipfile."
+    @echo "  install-dev         - Installs the project development dependencies."
+    @echo "  sync                - Syncs the virtual environment with Pipfile.lock."
+    @echo "  sync-dev            - Syncs the virtual environment with Pipfile.lock (including dev)."
+    @echo "  build               - Creates requirements.txt and builds using SAM."
+    @echo "  run-frame-generator - Runs the frame generation script."
+    @echo ""
+    @echo "Variables:"
+    @echo "  HUGGING_FACE_TOKEN  - Your Hugging Face access token (set in .env)."
+    @echo "  PYTORCH_CUDA_VERSION - The CUDA version for PyTorch (default: $(PYTORCH_CUDA_VERSION))."
+    @echo ""
+    @echo "Usage:"
+    @echo "  make <target>"
+    @echo ""
+    @echo "Example:"
+    @echo "  make run-frame-generator"

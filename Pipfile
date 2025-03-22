@@ -13,6 +13,7 @@ Jinja2 = "*"
 python-dotenv = "*"
 torchvision = "*"
 torchaudio = "*"
+xformers = "*"
 
 [dev-packages]
 pytest = "*"
