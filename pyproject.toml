@@ -1,0 +1,23 @@
+[tool.flake8]
+max-line-length = 110
+ignore = ["E111", "W503", "E501", "E999", "E203"]
+exclude = [".aws-sam", "__pycache__", "env", ".env", "*.md", "*.toml", "*.yaml", "*.json", "Pipfile*", "LICENSE", "makefile", ".*", "*old*"]
+max-complexity = 15
+max-cognitive-complexity = 15
+max-adjustable-complexity = 10
+
+[tool.autopep8]
+max_line_length = 110
+ignore = ["E501", "W6", "E501"]
+in-place = true
+recursive = true
+aggressive = 3
+
+[tool.black]
+line-length = 110
+
+[tool.pytest.ini_options]
+addopts = "--cov=. --cov-branch --cov-report term-missing --cov-fail-under=80 --color=yes"
+
+[tool.coverage.run]
+omit = ["tests/*", "*__init__*", "scrap*", "*old*"]

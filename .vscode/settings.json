@@ -1,0 +1,41 @@
+{
+  "python.analysis.typeCheckingMode": "basic",
+  "python.pipenvPath": "C:\\Users\\chris\\.virtualenvs\\LeetCode-gyt9os_N",
+  "python.analysis.logLevel": "Trace",
+  "python.analysis.diagnosticSeverityOverrides": {
+      "reportMissingImports": "error"
+  },
+  "python.terminal.activateEnvironment": false,
+  "code-runner.customCommand": "pipenv run python ${relativeFile}",
+  "[python]": {
+      "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "python.testing.unittestArgs": [
+      "-v",
+      "-s",
+      ".",
+      "-p",
+      "*test.py"
+  ],
+  "python.testing.pytestEnabled": false,
+  "python.testing.unittestEnabled": true,
+  "cSpell.words": [
+    "addopts",
+    "autopep",
+    "isort",
+    "leetcode",
+    "ONEDNN",
+    "pipenv",
+    "Pipfile",
+    "popleft",
+    "pycache",
+    "pypi",
+    "pyproject",
+    "pytest",
+    "pyupgrade",
+    "starcoder",
+    "Subarray"
+  ],
+  "python.linting.linter": "flake8",
+  "python.linting.flake8Enabled": true
+}

@@ -1,0 +1,43 @@
+fail_fast: false
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-toml
+      - id: check-json
+      - id: debug-statements
+      - id: mixed-line-ending
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+  - repo: https://github.com/pycqa/isort
+    rev: 6.0.1
+    hooks:
+      - id: isort
+        name: isort (python)
+  # - repo: https://github.com/hhatto/autopep8
+  #   rev: "v2.3.2"
+  #   hooks:
+  #     - id: autopep8
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v3.19.1
+    hooks:
+      - id: pyupgrade
+        args: [--py37-plus]
+  - repo: https://github.com/ambv/black
+    rev: 25.1.0
+    hooks:
+      - id: black
+  - repo: local
+    hooks:
+      - id: flake8
+        name: flake8
+        language: system
+        entry: pipenv run flake8
+  # - repo: local
+  #   hooks:
+  #     - id: pytest
+  #       name: pytest
+  #       language: system
+  #       entry: pipenv run pytest
+  #       pass_filenames: false
+  #       always_run: true
